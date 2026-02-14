@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>axi0m Jailbreak</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="axi0m" />
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Sileo/Sileo/master/Sileo/Assets.xcassets/AppIcon.appiconset/Sileo-120.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: -apple-system, "SF Pro Text", "SF Pro Regular", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #000;
+        color: white;
+        margin: 0;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        letter-spacing: -0.011em;
+      }
+
+      .ios-blur {
+        backdrop-filter: blur(40px) saturate(150%);
+        -webkit-backdrop-filter: blur(40px) saturate(150%);
+        background-color: rgba(28, 28, 30, 0.8);
+      }
+
+      .axi0m-text {
+        color: #FFFFFF;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+
+      .install-btn:active {
+        transform: scale(0.98);
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes terminalLineIn {
+        from { opacity: 0; transform: translateX(-4px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      }
+
+      .terminal-line {
+        animation: terminalLineIn 0.2s ease-out forwards;
+      }
+
+      .terminal-cursor {
+        display: inline-block;
+        width: 7px;
+        height: 14px;
+        background-color: #A6ACCD;
+        margin-left: 4px;
+        vertical-align: middle;
+        animation: blink 1s step-end infinite;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
